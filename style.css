@@ -10,52 +10,91 @@ Version: 1
 @import url(http://fonts.googleapis.com/css?family=Gafata|Carrois+Gothic+SC|Unica+One|Josefin+Sans);
 
 /* ---------- Vertical Navigation ---------- */
-
-.vertical_menu {
+.vertical_nav {
 	float: left;
 	font-family: "Josefin Sans";
-	font-size: 22px;
+	font-size: 18px;
 	font-style: bold;
-	padding: 5px;
+	position: fixed;
+    margin-top: 30px;
 }
 
-.vertical_menu li {
+.vertical_nav li {
 	list-style: none;
-	margin-top: 2px;
-	min-width: 300px;
-	min-height: 75px;
-}
-
-.vertical_menu li:nth-child(1) {
-	background-color: #DBABB8;
-}
-
-.vertical_menu li:nth-child(2) {
-	background-color: #C5DE8E;
-}
-
-.vertical_menu li:nth-child(3) {
-	background-color: #87D4DB;
-}
-
-.vertical_menu li:nth-child(4) {
-	background-color: #FDC05D;
-}
-		
-.vertical_menu li:nth-child(5) {
-	background-color: #8783B7;
-}
-
-.vertical_menu li a {
-	text-decoration: none;
-	text-align: right;
-	color: white;
+	margin-top: 10px;
 	margin-left: 10px;
+	width: 125px;
+	height: 125px;
+	
+	background-image: url(images/button.png);
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-webkit-background-size: 100%;
+}
+.vertical_nav li a {
+	text-decoration: none;
+	color: white;
+	position: absolute;
+	margin-top: 40px;
+	margin-left: 3px;
+	box-sizing:border-box;  
+    -moz-box-sizing:border-box;  
+    -webkit-box-sizing:border-box;
 }
 
-.vertical_menu li a:hover,
-.vertical_menu li:hover {
-	background-color: #D9D9D9;
+.vertical_nav li:hover,
+.vertical_nav li:active {
+	background-image: url(images/button_highlight.png);
+	cursor: pointer;
+
+}
+
+.nav-toggle {
+    display: none;  
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+
+	.vertical_nav {
+		font-size: 15px;
+	}
+
+	.vertical_nav li {
+		margin-top: 2px;
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+	.vertical_nav li {
+		display: none;
+	}
+
+	.nav-toggle {
+		display: block;  
+        position: relative;
+	}
+
+	.nav-toggle:after {
+		background: #CCC;
+        width: 30px;  
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+	}
+
+	.vertical_nav li {  
+        display: block;  
+        float: none;  
+        width: 100%;  
+    }  
+    .vertical_nav li a {  
+        border-bottom: 1px solid #576979;  
+    }  
 }
 
 /* ---------- Vertical Navigation End ---------- */
@@ -63,19 +102,46 @@ Version: 1
 
 /* ---------- Content ---------- */
 
-.content_page {
-	margin-left: 300px;
-	background-color: #FEDEDF;
-	position: absolute;
+#main-content .main-content {
+	background: #9C8F81;
+	color: #CCC;
+	margin: auto;
 }
 
-.content_page h1 {
-	background-color: white;
-	height: 50px;
-	font-family: "Gafata";
-	font-size: 15px;
-	color: black;
+/*---------- traditional Section ----------*/
+
+.traditional_container-full {
+	padding: 30px 30px;
+	background-color: #CCC;
+    height: 100vh;
 }
+
+.traditional_content {
+	color: white;
+	margin-left: 150px;
+}
+
+h1 {
+	font-family: "Carrois Gothic SC";
+	font-size: 25px;
+	color: white;
+}
+
+/* ---------- traditional Section End ----------*/
+
+/* ---------- Digital Works ---------*/
+
+.digital_container-full {
+	padding: 30px 30px;
+	background-color: #F0F0F0;
+    height: 100vh;
+}
+
+.digital_content {
+	color: white;
+	margin-left: 150px;
+}
+
 /* ---------- Main Content End ---------- */
 
 @media screen {
