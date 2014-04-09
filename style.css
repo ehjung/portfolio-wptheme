@@ -16,14 +16,13 @@ Version: 1
 	font-size: 18px;
 	font-style: bold;
 	position: fixed;
-    margin-top: 30px;
     background-color: black;
+    padding: 0px 20px 0px 20px;
 }
 
 .vertical_nav li {
 	list-style: none;
 	margin-top: 10px;
-	margin-left: 10px;
 	width: 125px;
 	height: 125px;
 	
