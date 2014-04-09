@@ -17,6 +17,7 @@ Version: 1
 	font-style: bold;
 	position: fixed;
     margin-top: 30px;
+    background-color: black;
 }
 
 .vertical_nav li {
